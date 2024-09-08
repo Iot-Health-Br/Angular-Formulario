@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {ChangeDetectionStrategy} from '@angular/core';
 import {MatNativeDateModule, provideNativeDateAdapter} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -26,6 +27,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    CommonModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './card.component.html',
