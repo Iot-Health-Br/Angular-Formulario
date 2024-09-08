@@ -1,0 +1,23 @@
+.example-card {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center the card horizontally */
+  display: flex; /* Enable flexbox for image centering */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally within the card */
+}
+
+.example-card img {
+  /* Remove inline styles to avoid conflicts */
+  width: 100%; /* Make image fill available width */
+  object-fit: cover; /* Maintain aspect ratio and scale to fit */
+}
+
+.example-form-field {
+  width: 200px;
+}
+
+/*Linhas do formulário*/
+.form-row {
+  display: flex;
+  margin-bottom: 10px;
+}
