@@ -1,15 +1,15 @@
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
 import { provideServerRendering } from '@angular/platform-server';
-import { HttpClientModule } from '@angular/common/http';  // Importe o HttpClientModule
-import { importProvidersFrom } from '@angular/core';  // Helper para fornecer módulos standalone
-import { appConfig } from './app.config';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';  // Importe o withFetch
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { importProvidersFrom } from '@angular/core';
+import { appConfig } from './app.config';
 
 const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(),
-    importProvidersFrom(HttpClientModule),  // Fornece o HttpClientModule no lado do servidor
-    importProvidersFrom(BrowserAnimationsModule)  // Adicione o BrowserAnimationsModule para SSR também
+    provideHttpClient(withFetch()),  // Adiciona o withFetch() no lado servidor
+    importProvidersFrom(BrowserAnimationsModule)
   ]
 };
 
